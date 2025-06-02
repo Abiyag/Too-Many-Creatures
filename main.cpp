@@ -11,13 +11,13 @@ int main() {
 
     // Test parameterized constructor with valid data
     Creature validCreature("Fire Dragon",
-                           Creature::Category::ANIMAL, Creature::FIRE, 150, 10, true);
+                           Creature::Category::ANIMAL, Creature::School::FIRE, 150, 10, true); // there is no data member FIRE for Creature, it has to be specified that it is calling the enum class
     validCreature.display();
     cout << endl;
 
     // Test parameterized constructor with invalid health and level
     Creature invalidCreature("Lost Soul",
-                             Creature::Category::UNDEAD, Creature::DEATH, -50, 0, true);
+                             Creature::Category::UNDEAD, Creature::School::DEATH, -50, 0, true); // here as well for Death
     invalidCreature.display();
     cout << endl;
 

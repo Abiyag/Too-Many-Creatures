@@ -26,8 +26,8 @@ Creature::Creature(const std::string& name, Category category, School school, in
     name_ = name;
     category_ = category;
     school_ = school;
-    health_ = health;
-    level_ = level;
+    health_ = (health > 0) ? health : 1; 
+    level_ = (level > 0) ? level : 1;
     isHostile_ = isHostile;
 }
 
